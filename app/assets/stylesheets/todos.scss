@@ -1,0 +1,46 @@
+// Place all the styles related to the todos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  width: 940px;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+.todoBox {
+  padding-top: 20px;
+  width: 600px;
+}
+
+.todoForm {
+  input {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 15px;
+    margin: 10px 0;
+    height: 40px;
+  }
+}
+
+.todoList {
+  margin-bottom: 20px;
+
+  input {
+    margin: 5px;
+  }
+}
+
+.todoFilter {
+  a {
+    color: #888;
+  }
+}
+.completed {
+  text-decoration: line-through;
+}
+
+.selected {
+  font-weight: bold;
+}
