@@ -4,9 +4,11 @@ class TodoBox extends React.Component {
     this.state = { todos: props.todos, filter: 'all' }
   }
 
-  onToggle (todo) {
+  onToggle (id) {
+    debugger;
     let todos = this.state.todos
-    todos.find(t => t.title == todo.title).completed = !todo.completed
+    let todo = todos.find(t => t.id == id)
+    todo.completed = !todo.completed
     this.setState({todos})
   }
 
@@ -41,7 +43,7 @@ class TodoBox extends React.Component {
         <h1>Todo</h1>
         <TodoForm addTask={ (title) => this.addTask(title) } />
         <TodoList todos={ this.filteredTodos() }
-          onToggle={ (todo) => this.onToggle(todo) }
+          onToggle={ (id) => this.onToggle(id) }
           updateTask={ (updatedTodo) => this.updateTask(updatedTodo) } />
         <TodoFilter currentFilter={ this.state.filter } changeFilter={ (filter) => this.changeFilter(filter) } />
       </div>

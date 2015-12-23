@@ -3,7 +3,7 @@ class TodoList extends React.Component {
     let todoNodes = this.props.todos.map((todo) => {
       return (
         <TodoItem todo={ todo }
-          onToggle={ () => this.props.onToggle(todo) }
+          onToggle={ () => this.props.onToggle(todo.id) }
           updateTask={ (updatedTodo) => this.props.updateTask(updatedTodo) } />
       )
     })
